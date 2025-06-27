@@ -1,28 +1,28 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const socialLinks = [
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: <FaGithub className="text-xl" />,
-      url: 'https://github.com/yourusername',
+      url: "https://github.com/yourusername",
     },
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: <FaLinkedin className="text-xl" />,
-      url: 'https://linkedin.com/in/yourusername',
+      url: "https://linkedin.com/in/yourusername",
     },
     {
-      name: 'Twitter',
+      name: "Twitter",
       icon: <FaTwitter className="text-xl" />,
-      url: 'https://twitter.com/yourusername',
+      url: "https://twitter.com/yourusername",
     },
     {
-      name: 'Email',
+      name: "Email",
       icon: <FaEnvelope className="text-xl" />,
-      url: 'mailto:your.email@example.com',
+      url: "mailto:your.email@example.com",
     },
   ];
 
@@ -55,17 +55,26 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="flex flex-col space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition">
+                <a
+                  href="#home"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-white transition">
+                <a
+                  href="#projects"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition">
+                <a
+                  href="#contact"
+                  className="text-gray-400 hover:text-white transition"
+                >
                   Contact
                 </a>
               </li>
@@ -105,11 +114,10 @@ const Footer = () => {
           className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
         >
           <p>
-            &copy; {new Date().getFullYear()} Rachit Sharma. All rights reserved.
+            &copy; {new Date().getFullYear()} Rachit Sharma. All rights
+            reserved.
           </p>
-          <p className="mt-2 text-sm">
-            Built with React, Tailwind CSS, and ❤️
-          </p>
+          <p className="mt-2 text-sm">Built with React, Tailwind CSS, and ❤️</p>
         </motion.div>
       </div>
     </footer>

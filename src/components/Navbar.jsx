@@ -26,9 +26,11 @@ export default function Navbar() {
   ];
 
   return (
-    <div className={`fixed w-full h-20 z-[100] bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm transition-colors duration-300 ${
-      shadow ? "shadow-xl" : ""
-    }`}>
+    <div
+      className={`fixed w-full h-20 z-[100] bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm transition-colors duration-300 ${
+        shadow ? "shadow-xl" : ""
+      }`}
+    >
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <a href="#home">
           <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
@@ -51,7 +53,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          
+
           <ThemeToggle />
 
           <div
@@ -74,10 +76,13 @@ export default function Navbar() {
                 <span className="text-blue-600 dark:text-blue-400">{"/>"}</span>
               </h1>
               <div onClick={() => setNav(false)} className="cursor-pointer">
-                <FaTimes size={25} className="text-gray-700 dark:text-gray-300" />
+                <FaTimes
+                  size={25}
+                  className="text-gray-700 dark:text-gray-300"
+                />
               </div>
             </div>
-            
+
             <ul className="space-y-8">
               {navigation.map((item) => (
                 <li key={item.name}>
@@ -91,7 +96,7 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="absolute bottom-10 left-10">
               <ThemeToggle />
             </div>
