@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { FaJava, FaReact, FaDatabase } from 'react-icons/fa';
 import { SiSpringboot, SiJavascript } from 'react-icons/si';
