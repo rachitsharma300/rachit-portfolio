@@ -1,83 +1,90 @@
 import { motion } from 'framer-motion';
-import { FaJava, FaReact, FaDatabase } from 'react-icons/fa';
-import { SiSpringboot, SiJavascript, SiTailwindcss, SiGit } from 'react-icons/si';
+import { FaJava, FaReact, FaPython, FaNodeJs } from 'react-icons/fa';
+import { SiJavascript, SiTailwindcss, SiGit, SiPostgresql, SiMongodb } from 'react-icons/si';
 
 const Skills = () => {
-  const skills = [
+  const skillCategories = [
     {
-      name: 'Java',
-      icon: <FaJava className="text-red-500" />,
-      level: 'Advanced'
+      title: 'Frontend',
+      skills: ['HTML', 'CSS', 'JavaScript', 'React', 'DOM', 'Tailwind CSS', 'Unit Test'],
+      icon: '💻'
     },
     {
-      name: 'Spring Boot',
-      icon: <SiSpringboot className="text-green-500" />,
-      level: 'Intermediate'
+      title: 'Backend',
+      skills: ['Node.js', 'REST API', 'JWT/OAuth'],
+      icon: '⚙️'
     },
     {
-      name: 'JavaScript',
-      icon: <SiJavascript className="text-yellow-500" />,
-      level: 'Intermediate'
+      title: 'Languages',
+      skills: ['Java', 'JavaScript', 'Python', 'C'],
+      icon: '📝'
     },
     {
-      name: 'React',
-      icon: <FaReact className="text-blue-500" />,
-      level: 'Intermediate'
+      title: 'Tools',
+      skills: ['Git', 'GitHub', 'Linux', 'Vercel'],
+      icon: '🧰'
     },
     {
-      name: 'SQL Databases',
-      icon: <FaDatabase className="text-gray-500" />,
-      level: 'Intermediate'
-    },
-    {
-      name: 'Tailwind CSS',
-      icon: <SiTailwindcss className="text-cyan-500" />,
-      level: 'Intermediate'
-    },
-    {
-      name: 'Git',
-      icon: <SiGit className="text-orange-500" />,
-      level: 'Intermediate'
-    },
+      title: 'Database',
+      skills: ['MongoDB', 'PostgreSQL'],
+      icon: '🗄️'
+    }
   ];
 
+  const getIcon = (skill) => {
+    switch(skill) {
+      case 'Java': return <FaJava className="text-red-500" />;
+      case 'React': return <FaReact className="text-blue-400" />;
+      case 'JavaScript': return <SiJavascript className="text-yellow-500" />;
+      case 'Tailwind CSS': return <SiTailwindcss className="text-cyan-500" />;
+      case 'Git': return <SiGit className="text-orange-500" />;
+      case 'Node.js': return <FaNodeJs className="text-green-600" />;
+      case 'Python': return <FaPython className="text-blue-800" />;
+      case 'PostgreSQL': return <SiPostgresql className="text-blue-700" />;
+      case 'MongoDB': return <SiMongodb className="text-green-700" />;
+      default: return <span>{skill.charAt(0)}</span>;
+    }
+  };
+
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-dark-800">
+    <section id="skills" className="py-12 bg-gray-50 dark:bg-dark-800">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">My Skills</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Technologies I've worked with and my proficiency level
-          </p>
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200">My Skills</h2>
+          <div className="w-16 h-1 bg-blue-600 mx-auto mt-2 mb-4"></div>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {skills.map((skill, index) => (
+        <div className="flex flex-wrap justify-center gap-6">
+          {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="w-full sm:w-[45%] lg:w-[30%] bg-white dark:bg-dark-700 rounded-xl shadow-sm overflow-hidden"
             >
-              <div className="text-4xl mb-4 flex justify-center">
-                {skill.icon}
+              <div className="flex items-center p-3 bg-gray-100 dark:bg-dark-600">
+                <span className="text-xl mr-2">{category.icon}</span>
+                <h3 className="font-semibold text-gray-800 dark:text-gray-200">
+                  {category.title}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-center text-gray-800 dark:text-gray-200 mb-2">
-                {skill.name}
-              </h3>
-              <div className="flex justify-center">
-                <span className="text-sm text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-3 py-1 rounded-full">
-                  {skill.level}
-                </span>
+              <div className="p-4 flex flex-wrap gap-3">
+                {category.skills.map((skill, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center px-3 py-1.5 rounded-full bg-gray-50 dark:bg-dark-600 text-sm"
+                  >
+                    <span className="mr-2 text-lg">{getIcon(skill)}</span>
+                    {skill}
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           ))}
