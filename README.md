@@ -1,12 +1,26 @@
-# React + Vite
+# Rachit Sharma - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Screenshot](./public/screenshot.png) *Add your screenshot image here*
 
-Currently, two official plugins are available:
+A modern, responsive portfolio website showcasing my skills, projects, and professional journey as a Full Stack Java Developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Interactive Particle Background** - Dynamic animation reacts to mouse movement
+- **Dark/Light Mode Toggle** - With smooth theme transitions
+- **Typewriter Effect** - Animated hero section text
+- **Responsive Design** - Works perfectly on all devices
+- **Project Showcase** - Highlighting key work samples
+- **Contact Form** - Easy way to get in touch
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+### Core Dependencies
+```json
+"dependencies": {
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-scripts": "5.0.1",
+  "framer-motion": "^10.16.4",
+  "react-icons": "^4.8.0"
+}
