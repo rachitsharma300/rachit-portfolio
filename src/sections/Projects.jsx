@@ -5,16 +5,16 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application with Java Spring Boot backend and React frontend.",
-      tags: ["Java", "Spring Boot", "React", "MySQL"],
-      githubLink: "https://github.com/yourusername/ecommerce-app",
+      title: "ByteBuzz Chat App",
+      description: "Full-stack Chat Application with Java Spring Boot, WebSocket, backend and React frontend.",
+      tags: ["Java", "Spring Boot", "React", "MongoDb"],
+      githubLink: "https://github.com/rachitsharma300/bytebuzz",
       liveLink: "https://ecommerce-demo.com"
     },
     {
-      title: "Task Management App",
-      description: "A productivity app for managing tasks with user authentication and real-time updates.",
-      tags: ["Spring Security", "JWT", "React", "MongoDB"],
+      title: "Weather App",
+      description: "A Weatcher Application using Open Weather API for real-time updates.",
+      tags: ["Java", "JSP", "Servlet", "REST Api"],
       githubLink: "https://github.com/yourusername/task-manager",
       liveLink: null
     },
