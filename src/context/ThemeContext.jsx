@@ -3,29 +3,20 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Check local storage first, then system preference
+  const [darkMode, setDarkMode] = useState(() => {
+    // Initialize from localStorage if exists, otherwise use system preference (default to dark)
     const savedMode = localStorage.getItem("darkMode");
-    if (savedMode !== null) {
-      setDarkMode(savedMode === "true");
-    } else {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      setDarkMode(prefersDark);
-    }
-  }, []);
+    if (savedMode !== null) return savedMode === "true";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches || true; // Default to dark
+  });
 
   useEffect(() => {
-    // Apply class to HTML element
+    // Apply class and save to localStorage
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-    // Save to localStorage
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
