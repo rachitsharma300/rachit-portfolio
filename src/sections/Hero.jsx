@@ -1,16 +1,117 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
 import Typewriter from "typewriter-effect";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import { useTheme } from "../context/ThemeContext";
 
 const Hero = () => {
+  const { darkMode } = useTheme();
+
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
+  }, []);
+
+  // Light mode optimizations
+  const particleColor = darkMode ? "#3B82F6" : "#1D4ED8"; // Darker blue for light
+  const linkColor = darkMode ? "#93C5FD" : "#1E40FF"; // Brighter connection lines
+  const particleOpacity = darkMode
+    ? { min: 0.3, max: 0.7 }
+    : { min: 0.6, max: 0.9 };
+  const linkOpacity = darkMode ? 0.4 : 0.7;
+  const particleSize = darkMode ? { min: 1, max: 3 } : { min: 2, max: 4 };
+  const linkWidth = darkMode ? 1 : 1.5;
+
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white dark:from-dark-800 dark:to-dark-900 transition-colors duration-300"
+      className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-white dark:from-dark-800 dark:to-dark-900"
     >
-      <div className="container mx-auto px-4 text-center">
+      {/* Particle Background - Full Screen */}
+      <div className="absolute inset-0 z-0 h-full w-full">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          options={{
+            fullScreen: { enable: false },
+            background: { color: "transparent" },
+            particles: {
+              number: { value: darkMode ? 50 : 40 }, // Reduced number since text takes more space
+              color: { value: particleColor },
+              shape: {
+                type: "char",
+                options: {
+                  char: {
+                    value: [
+                      "HTML",
+                      "CSS",
+                      "JS",
+                      "React",
+                      "Node",
+                      "Python",
+                      "Java",
+                      "Git",
+                      "Docker",
+                      "AWS",
+                      "SQL",
+                      "MongoDB",
+                      "PostgreSQL",
+                      "Tailwind",
+                      "Linux",
+                      "GitHub",
+                      "REST",
+                      "CI/CD",
+                    ],
+                    font: "Verdana",
+                    style: "",
+                    weight: "400",
+                  },
+                },
+              },
+              links: {
+                color: linkColor,
+                distance: 150, // Slightly increased distance for better readability
+                enable: true,
+                opacity: linkOpacity,
+                width: linkWidth,
+              },
+              move: {
+                enable: true,
+                speed: { min: 0.3, max: 1 }, // Slightly slower for text readability
+                outModes: { default: "bounce" },
+              },
+              opacity: particleOpacity,
+              size: {
+                value: 6, // Fixed size for better text readability
+                random: false,
+              },
+            },
+            interactivity: {
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+              },
+              modes: {
+                repulse: {
+                  distance: 100, // Increased repulse distance
+                  duration: 0.4,
+                },
+              },
+            },
+          }}
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </div>
+      {/* Content */}
+      <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,14 +161,14 @@ const Hero = () => {
 
           <div className="flex justify-center gap-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/rachitsharma300"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub className="text-2xl text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/rachitsharma300"
               target="_blank"
               rel="noopener noreferrer"
             >
