@@ -165,7 +165,7 @@ const About = () => {
                     className="relative group"
                     title={tech.name}
                   >
-                    <div className="p-1 rounded-lg shadow-sm">{tech.icon}</div>
+                    <div className="p-1 rounded-lg ">{tech.icon}</div>
                   </motion.div>
                 ))}
               </div>
