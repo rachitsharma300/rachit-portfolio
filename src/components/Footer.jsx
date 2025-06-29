@@ -7,27 +7,27 @@ const Footer = () => {
     {
       name: "GitHub",
       icon: <FaGithub className="text-xl" />,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/rachitsharma300",
     },
     {
       name: "LinkedIn",
       icon: <FaLinkedin className="text-xl" />,
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/rachitsharma300/",
     },
     {
       name: "Twitter",
       icon: <FaTwitter className="text-xl" />,
-      url: "https://twitter.com/yourusername",
+      url: "https://x.com/rachitsharma300",
     },
     {
       name: "Email",
       icon: <FaEnvelope className="text-xl" />,
-      url: "mailto:your.email@example.com",
+      url: "mailto:rachitsharma300@outlook.com",
     },
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-4">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left Section - Branding */}
@@ -46,40 +46,6 @@ const Footer = () => {
           </motion.div>
 
           {/* Middle Section - Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-6 md:mb-0"
-          >
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="flex flex-col space-y-2">
-              <li>
-                <a
-                  href="#home"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </motion.div>
 
           {/* Right Section - Social Links */}
           <motion.div
@@ -111,13 +77,12 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+          className=" border-gray-800 mt-4 pt-4 text-center text-gray-400"
         >
           <p>
             &copy; {new Date().getFullYear()} Rachit Sharma. All rights
             reserved.
           </p>
-          <p className="mt-2 text-sm">Built with React, Tailwind CSS, and ❤️</p>
         </motion.div>
       </div>
     </footer>
