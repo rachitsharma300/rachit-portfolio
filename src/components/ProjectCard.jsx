@@ -8,15 +8,43 @@ const ProjectCard = ({
   tags = [],
   githubLink,
   liveLink,
+  videoUrl
 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      whileHover={{ 
+        scale: 1.05,
+        transition: { 
+          type: "spring",
+          stiffness: 400,
+          damping: 10
+        }
+      }}
       viewport={{ once: true }}
-      className="bg-white dark:bg-dark-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-dark-700 transition-colors duration-300"
+      className="h-full bg-white dark:bg-dark-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-dark-700 cursor-pointer"
     >
+      {/* Video or Image Placeholder */}
+      <div className="h-48 bg-gray-100 dark:bg-dark-700 overflow-hidden">
+        {videoUrl ? (
+          <iframe 
+            src={videoUrl}
+            className="w-full h-full"
+            frameBorder="0"
+            allowFullScreen
+            title={title}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 p-4 text-center">
+              {title}
+            </h3>
+          </div>
+        )}
+      </div>
+
+      {/* Project Details */}
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">
           {title}
