@@ -8,7 +8,7 @@ const Projects = () => {
       title: "ByteBuzz Chat App",
       description:
         "Full-stack Chat Application with Java Spring Boot, WebSocket, backend and React frontend.",
-      tags: ["Java", "Spring Boot", "React", "MongoDb"],
+      tags: ["Java", "Spring Boot", "WebSocket", "React", "MongoDb"],
       githubLink: "https://github.com/rachitsharma300/bytebuzz",
       liveLink: "https://ecommerce-demo.com",
       videoUrl:
@@ -18,9 +18,10 @@ const Projects = () => {
       title: "Weather App",
       description:
         "A Weatcher Application using Open Weather API for real-time updates.",
-      tags: ["Java", "JSP", "Servlet", "REST Api"],
+      tags: ["Java", "JSP", "Servlets", "HTML5 & CSS3", "OpenWeather API"],
       githubLink: "https://github.com/yourusername/task-manager",
       liveLink: null,
+      videoUrl: "https://github.com/rachitsharma300/Weather-Web-App/assets/50745070/204eeaac-103e-44d1-9ab8-e01451e1e908"
     },
     {
       title: "ByteBuzz Chat App",
