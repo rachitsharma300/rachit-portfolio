@@ -1,6 +1,7 @@
 # Rachit Sharma - Portfolio Website
+## Demo
+https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
 
-![Portfolio Screenshot](./public/screenshot.png) *Add your screenshot image here*
 
 A modern, responsive portfolio website showcasing my skills, projects, and professional journey as a Full Stack Java Developer.
 
