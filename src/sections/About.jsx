@@ -128,19 +128,21 @@ const About = () => {
 
             <div className="space-y-4 text-gray-600 dark:text-gray-400 mb-8">
               <p>
-                I specialize in building enterprise applications using Java,
-                Spring Boot, and modern JavaScript frameworks. My focus is on
-                creating efficient, scalable solutions with clean code
-                architecture.
+                I specialize in building robust enterprise applications using
+                Java, Spring Boot, and modern JavaScript frameworks. My focus is
+                on developing efficient, scalable, and well architected
+                solutions that align with business goals.
               </p>
               <p>
                 With experience across the full development stack, I bridge the
-                gap between robust backend systems and intuitive frontend
-                interfaces.
+                gap between strong backend systems and intuitive frontend
+                interfaces to deliver seamless user experiences
               </p>
               <p>
-                Continuously learning and adapting to new technologies, I'm
-                committed to delivering high-quality software solutions.
+                I believe in writing clean, maintainable code and continuously
+                enhancing my skills to stay updated with evolving technologies.
+                I am committed to building high-quality software solutions that
+                create real impact.
               </p>
             </div>
 
