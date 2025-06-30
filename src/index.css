@@ -10,3 +10,22 @@ html {
 body {
   @apply bg-white dark:bg-dark-900 text-gray-800 dark:text-gray-200;
 }
+
+/* Add these animations to your global CSS file */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-slow-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 10s linear infinite;
+}
