@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaJava, FaReact, FaPython, FaNodeJs } from "react-icons/fa";
 import {
@@ -89,18 +90,13 @@ const Skills = () => {
         // Database
         { name: "MySQL + JDBC", icon: <SiMysql className="text-blue-500" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-
         // DevOps
         { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
         { name: "AWS", icon: <FaAws className="text-amber-600" /> },
-
         // Developer Tools
         { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
         { name: "IntelliJ", icon: <DiIntellij className="text-purple-600" /> },
-        {
-          name: "Bootstrap",
-          icon: <SiBootstrap className="text-purple-500" />,
-        },
+        { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500" />,},
         { name: "Git", icon: <SiGit className="text-orange-500" /> },
       ],
       color: "border-amber-200 dark:border-amber-900/50",
@@ -118,6 +114,7 @@ const Skills = () => {
   const SkillBox = ({ category, index }) => {
     const containerRef = useRef(null);
     const contentRef = useRef(null);
+    // eslint-disable-next-line no-unused-vars
     const [shouldScroll, setShouldScroll] = useState(false);
 
     useEffect(() => {
