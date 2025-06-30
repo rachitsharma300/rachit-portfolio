@@ -4,51 +4,24 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiGit,
-  SiPostgresql,
+  SiMysql,
   SiMongodb,
   SiSpringboot,
+  SiJunit5,
+  SiDocker,
+  SiPostman,
+  SiBootstrap,
 } from "react-icons/si";
+
+// Special cases (import from different packages)
+import { FaAws } from "react-icons/fa";
+import { DiIntellij } from "react-icons/di";
+
 import { TbApi } from "react-icons/tb";
+import { useEffect, useRef, useState } from "react";
 
 const Skills = () => {
   const skillCategories = [
-    {
-      title: "Frontend Development",
-      skills: [
-        {
-          name: "HTML5 & CSS3",
-          icon: (
-            <span className="flex items-center">
-              <span className="text-orange-500 mr-1">{"</>"}</span>
-              <span className="text-blue-400">#</span>
-            </span>
-          ),
-        },
-        {
-          name: "JavaScript",
-          icon: <SiJavascript className="text-yellow-400" />,
-        },
-        { name: "React", icon: <FaReact className="text-blue-500" /> },
-        {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="text-cyan-400" />,
-        },
-      ],
-      color: "border-blue-200 dark:border-blue-900/50",
-    },
-    {
-      title: "Backend Development",
-      skills: [
-        {
-          name: "Spring Boot",
-          icon: <SiSpringboot className="text-green-500" />,
-        },
-        { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
-        { name: "REST API", icon: <TbApi className="text-purple-500" /> },
-        { name: "JWT/OAuth", icon: <span className="text-red-400">🔐</span> },
-      ],
-      color: "border-green-200 dark:border-green-900/50",
-    },
     {
       title: "Programming Languages",
       skills: [
@@ -62,15 +35,73 @@ const Skills = () => {
       color: "border-purple-200 dark:border-purple-900/50",
     },
     {
+      title: "Frontend Development",
+      skills: [
+        {
+          name: "HTML5/CSS3",
+          icon: (
+            <span className="flex">
+              <span className="text-orange-500">{"</>"}</span>
+              <span className="text-blue-400">#</span>
+            </span>
+          ),
+        },
+        {
+          name: "JavaScript",
+          icon: <SiJavascript className="text-yellow-400" />,
+        },
+        { name: "React", icon: <FaReact className="text-blue-500" /> },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss className="text-cyan-400" />,
+        },
+        { name: "Thymeleaf", icon: <span className="text-green-500">🍃</span> },
+      ],
+      color: "border-blue-200 dark:border-blue-900/50",
+    },
+    {
+      title: "Backend Development",
+      skills: [
+        {
+          name: "Spring Boot",
+          icon: <SiSpringboot className="text-green-500" />,
+        },
+        {
+          name: "Spring Database",
+          icon: <span className="text-green-600">🛢️</span>,
+        },
+        {
+          name: "JWT/WebFlux",
+          icon: <span className="text-purple-500">⚡</span>,
+        },
+        {
+          name: "Batch Processing",
+          icon: <span className="text-blue-400">🔄</span>,
+        },
+        { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
+        { name: "REST API", icon: <TbApi className="text-purple-500" /> },
+      ],
+      color: "border-green-200 dark:border-green-900/50",
+    },
+    {
       title: "Database & Tools",
       skills: [
+        // Database
+        { name: "MySQL + JDBC", icon: <SiMysql className="text-blue-500" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+
+        // DevOps
+        { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
+        { name: "AWS", icon: <FaAws className="text-amber-600" /> },
+
+        // Developer Tools
+        { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+        { name: "IntelliJ", icon: <DiIntellij className="text-purple-600" /> },
         {
-          name: "PostgreSQL",
-          icon: <SiPostgresql className="text-blue-600" />,
+          name: "Bootstrap",
+          icon: <SiBootstrap className="text-purple-500" />,
         },
         { name: "Git", icon: <SiGit className="text-orange-500" /> },
-        { name: "Linux", icon: <span className="text-yellow-600">🐧</span> },
       ],
       color: "border-amber-200 dark:border-amber-900/50",
     },
@@ -83,6 +114,98 @@ const Skills = () => {
     { skill: "SQL", level: 70, color: "bg-blue-600" },
     { skill: "Node.Js", level: 65, color: "bg-purple-600" },
   ];
+
+  const SkillBox = ({ category, index }) => {
+    const containerRef = useRef(null);
+    const contentRef = useRef(null);
+    const [shouldScroll, setShouldScroll] = useState(false);
+
+    useEffect(() => {
+      if (!containerRef.current || !contentRef.current) return;
+
+      const container = containerRef.current;
+      const content = contentRef.current;
+
+      // Calculate if scrolling is needed
+      const containerHeight = container.clientHeight;
+      const contentHeight = content.scrollHeight;
+      const needsScroll = contentHeight > containerHeight;
+      setShouldScroll(needsScroll);
+
+      if (needsScroll) {
+        let scrollPosition = 0;
+        const scrollSpeed = 40; // pixels per second
+        let animationId;
+
+        const scrollContent = () => {
+          scrollPosition += scrollSpeed / 60; // 60fps
+
+          if (scrollPosition >= contentHeight - containerHeight) {
+            // Smoothly return to top
+            container.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+            scrollPosition = 0;
+          } else {
+            container.scrollTo({
+              top: scrollPosition,
+              behavior: "smooth",
+            });
+          }
+
+          animationId = requestAnimationFrame(scrollContent);
+        };
+
+        // Start scrolling after 2 seconds
+        const startTimeout = setTimeout(() => {
+          animationId = requestAnimationFrame(scrollContent);
+        }, 2000);
+
+        return () => {
+          clearTimeout(startTimeout);
+          cancelAnimationFrame(animationId);
+        };
+      }
+    }, [category.skills.length]);
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+        viewport={{ once: true }}
+        className={`rounded-xl border ${category.color} bg-white dark:bg-dark-800 p-5 shadow-sm hover:shadow-md transition-shadow`}
+      >
+        <h3 className="font-bold text-lg text-gray-800 dark:text-gray-200 mb-4 flex items-center">
+          <span className="mr-2 text-xl">{category.icon}</span>
+          {category.title}
+        </h3>
+        <div
+          ref={containerRef}
+          className="overflow-hidden"
+          style={{ height: "260px" }} // Fixed height for exactly 4 items
+        >
+          <div ref={contentRef} className="space-y-3">
+            {category.skills.map((skill, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-center px-4 py-2 rounded-lg bg-gray-50 dark:bg-dark-700"
+                style={{ height: "56px" }} // Fixed height for each skill item
+              >
+                <div className="mr-3 text-xl">{skill.icon}</div>
+                <span className="font-medium text-gray-700 dark:text-gray-300">
+                  {skill.name}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    );
+  };
 
   return (
     <section id="skills" className="py-16 bg-gray-50 dark:bg-dark-900">
@@ -103,7 +226,7 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-2 mb-16">
           {/* Proficiency Box - Now first in the grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -143,34 +266,7 @@ const Skills = () => {
 
           {/* Other Skill Categories */}
           {skillCategories.map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
-              viewport={{ once: true }}
-              className={`rounded-xl border ${category.color} bg-white dark:bg-dark-800 p-5 shadow-sm hover:shadow-md transition-shadow`}
-            >
-              <h3 className="font-bold text-lg text-gray-800 dark:text-gray-200 mb-4 flex items-center">
-                <span className="mr-2 text-xl">{category.icon}</span>
-                {category.title}
-              </h3>
-              <div className="space-y-3">
-                {category.skills.map((skill, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex items-center px-4 py-2 rounded-lg bg-gray-50 dark:bg-dark-700"
-                  >
-                    <div className="mr-3 text-xl">{skill.icon}</div>
-                    <span className="font-medium text-gray-700 dark:text-gray-300">
-                      {skill.name}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+            <SkillBox key={index} category={category} index={index} />
           ))}
         </div>
       </div>
