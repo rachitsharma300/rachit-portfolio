@@ -37,15 +37,22 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="mb-6 md:mb-0"
           >
-            <h2 className="text-2xl font-bold">
-              <span className="text-blue-500">{"<"}</span>
-              Rachit
-              <span className="text-blue-500">{"/>"}</span>
+            <h2 className="text-2xl font-bold flex items-center">
+              {/* Left bracket - rotates clockwise */}
+              <span className="text-blue-500 inline-block origin-center animate-spin-slow">
+                {"<"}
+              </span>
+
+              {/* Name - static */}
+              <span className="mx-1">Rachit</span>
+
+              {/* Right bracket - rotates counter-clockwise */}
+              <span className="text-blue-500 inline-block origin-center animate-spin-slow-reverse">
+                {"/>"}
+              </span>
             </h2>
             <p className="text-gray-400 mt-2">Java Full Stack Developer</p>
           </motion.div>
-
-          {/* Middle Section - Quick Links */}
 
           {/* Right Section - Social Links */}
           <motion.div
