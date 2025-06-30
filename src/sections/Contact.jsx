@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaTimes } from 'react-icons/fa';
 
-const Contact = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
 
+const Contact = ({ isOpen, onToggle }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Form submission logic
@@ -14,11 +13,11 @@ const Contact = () => {
   return (
     <div className="fixed right-4 bottom-4 z-50">
       {/* Collapsed Contact Button */}
-      {!isExpanded && (
+      {!isOpen && (
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => setIsExpanded(true)}
+          onClick={onToggle}
           className="bg-blue-600 text-white p-4 rounded-full shadow-xl"
           aria-label="Contact me"
         >
@@ -27,17 +26,16 @@ const Contact = () => {
       )}
 
       {/* Expanded Contact Panel */}
-      {isExpanded && (
+      {isOpen && (
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
           className="bg-white dark:bg-dark-900 w-[90vw] max-w-md rounded-xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700"
         >
           <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-dark-700">
             <h3 className="font-bold text-lg text-gray-800 dark:text-gray-200">Contact Me</h3>
             <button 
-              onClick={() => setIsExpanded(false)}
+              onClick={onToggle}
               className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
             >
               <FaTimes />
