@@ -8,6 +8,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import Certifications from './sections/Certifications';
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         isOpen={contactOpen} 
         onToggle={() => setContactOpen(!contactOpen)} 
       />
+      <Certifications />
       <Footer />
     </>
   );
