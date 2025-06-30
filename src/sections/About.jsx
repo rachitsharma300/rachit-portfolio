@@ -1,8 +1,38 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
-import profilePhoto from "../assets/Rachit.png";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import profilePhoto1 from "../assets/Rachit.png";
+import profilePhoto2 from "../assets/Rachit2.png";
 
 const About = () => {
+  const controls = useAnimation();
+  
+  useEffect(() => {
+    const sequence = async () => {
+      while (true) {
+        // First flip (show backside)
+        await controls.start({ 
+          rotateY: 180,
+          transition: { duration: 1.5, ease: "easeInOut" } 
+        });
+        // Pause on backside
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        // Second flip (show second photo)
+        await controls.start({ 
+          rotateY: 360,
+          transition: { duration: 1.5, ease: "easeInOut" } 
+        });
+        // Pause on second photo
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        // Reset to first photo
+        await controls.start({ 
+          rotateY: 0,
+          transition: { duration: 0 } // Instant reset
+        });
+      }
+    };
+    sequence();
+  }, [controls]);
+
   const technologies = [
     {
       icon: (
@@ -90,31 +120,52 @@ const About = () => {
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Full Stack Java Developer passionate about building robust
-            applications
+            Full Stack Java Developer passionate about building robust applications
           </p>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="lg:w-1/2 flex justify-center"
-          >
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="relative group"
-            >
-              <img
-                src={profilePhoto}
-                alt="Rachit Sharma"
-                className="rounded-xl w-full max-w-xs border-4 border-white dark:border-dark-700 shadow-xl"
-              />
-            </motion.div>
-          </motion.div>
+          <div className="lg:w-1/2 flex justify-center">
+            <div className="relative h-[450px] w-[350px] perspective-1000">
+              <motion.div
+                className="relative w-full h-full preserve-3d"
+                animate={controls}
+              >
+                {/* Front Side - First Photo */}
+                <div className="absolute w-full h-full backface-hidden">
+                  <img
+                    src={profilePhoto1}
+                    alt="Rachit Sharma"
+                    className="w-full h-full object-cover rounded-xl border-4 border-white dark:border-dark-700 shadow-xl"
+                  />
+                </div>
+
+                {/* Back Side - Developer Info */}
+                <div 
+                  className="absolute w-full h-full backface-hidden bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center p-6 text-white text-center"
+                  style={{ transform: 'rotateY(180deg)' }}
+                >
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Rachit Sharma</h3>
+                    <p className="text-sm">Full Stack Developer</p>
+                    <p className="text-xs mt-4">Specializing in Java & React</p>
+                  </div>
+                </div>
+
+                {/* Second Photo (hidden until flipped) */}
+                <div 
+                  className="absolute w-full h-full backface-hidden"
+                  style={{ transform: 'rotateY(180deg)' }}
+                >
+                  <img
+                    src={profilePhoto2}
+                    alt="Rachit Sharma"
+                    className="w-full h-full object-cover rounded-xl border-4 border-white dark:border-dark-700 shadow-xl"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -137,7 +188,7 @@ const About = () => {
               <p>
                 With experience across the full development stack, I bridge the
                 gap between strong backend systems and intuitive frontend
-                interfaces to deliver seamless user experiences
+                interfaces to deliver seamless user experiences.
               </p>
               <p>
                 I believe in writing clean, maintainable code and continuously
@@ -168,7 +219,7 @@ const About = () => {
                     className="relative group"
                     title={tech.name}
                   >
-                    <div className="p-1 rounded-lg ">{tech.icon}</div>
+                    <div className="p-1 rounded-lg">{tech.icon}</div>
                   </motion.div>
                 ))}
               </div>
