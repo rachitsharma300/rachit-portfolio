@@ -1,7 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import profilePhoto1 from "../assets/Rachit.png";
-import profilePhoto2 from "../assets/Rachit2.png";
+import profilePhoto2 from "../assets/Rachit1.jpeg";
 
 const About = () => {
   const controls = useAnimation();
