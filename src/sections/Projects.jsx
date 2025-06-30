@@ -6,33 +6,40 @@ const Projects = () => {
   const projects = [
     {
       title: "ByteBuzz Chat App",
-      description:
-        "Full-stack Chat Application with Java Spring Boot, WebSocket, backend and React frontend.",
-      tags: ["Java", "Spring Boot", "WebSocket", "React", "MongoDb"],
-      githubLink: "https://github.com/rachitsharma300/bytebuzz",
-      liveLink: "https://ecommerce-demo.com",
+      description: "Real-time chat app with Spring Boot (WebSocket) & React.",
+      tags: ["Java", "Spring Boot", "WebSocket", "React", "MongoDB", "Docker"],
+      githubLink: "https://github.com/rachitsharma300/bytebuzz-chat-app",
+      liveLink: "https://byte-buzz-chat-app.netlify.app/",
       videoUrl:
         "https://github.com/user-attachments/assets/33c87b82-af57-4746-acd4-31f8a96189fc",
     },
     {
-      title: "Weather App",
+      title: "Weather Web App",
       description:
-        "A Weatcher Application using Open Weather API for real-time updates.",
-      tags: ["Java", "JSP", "Servlets", "HTML5 & CSS3", "OpenWeather API"],
-      githubLink: "https://github.com/yourusername/task-manager",
+        "Real-time weather forecasts using OpenWeather API with Java backend.",
+      tags: [
+        "Java",
+        "Servlet",
+        "JSP",
+        "OpenWeather API",
+        "HTML",
+        "CSS",
+        "JavaScript",
+      ],
+      githubLink: "https://github.com/rachitsharma300/Weather-Web-App",
       liveLink: null,
       videoUrl:
         "https://github.com/rachitsharma300/Weather-Web-App/assets/50745070/204eeaac-103e-44d1-9ab8-e01451e1e908",
     },
     {
-      title: "ByteBuzz Chat App",
+      title: "Personal Portfolio",
       description:
-        "Full-stack Chat Application with Java Spring Boot, WebSocket, backend and React frontend.",
-      tags: ["Java", "Spring Boot", "React", "MongoDb"],
-      githubLink: "https://github.com/rachitsharma300/bytebuzz",
-      liveLink: "https://ecommerce-demo.com",
+        "Interactive developer portfolio with modern UI and project showcase.",
+      tags: ["React", "Tailwind CSS", "Framer Motion", "Responsive Design"],
+      githubLink: "https://github.com/rachitsharma300/rachit-portfolio",
+      liveLink: "",
       videoUrl:
-        "https://github.com/user-attachments/assets/33c87b82-af57-4746-acd4-31f8a96189fc",
+        "https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80",
     },
   ];
 
@@ -53,8 +60,7 @@ const Projects = () => {
             My Projects
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Here are some of my featured projects. Each one was built to solve
-            real problems.
+           My technical solutions to real-world problems - demonstrated through these projects.
           </p>
         </motion.div>
 
