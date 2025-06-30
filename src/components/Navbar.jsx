@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 
-export default function Navbar() {
+export default function Navbar({ onContactClick }) {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
 
@@ -22,21 +22,32 @@ export default function Navbar() {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact/" },
+    { 
+      name: "Contact", 
+      href: "#contact",
+      onClick: (e) => {
+        e.preventDefault();
+        onContactClick();
+        setNav(false);
+      }
+    }
   ];
 
   return (
-    <div
-      className={`fixed w-full h-20 z-[100] bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm transition-colors duration-300 ${
-        shadow ? "shadow-xl" : ""
-      }`}
-    >
+    <div className={`fixed w-full h-20 z-[100] bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm transition-colors duration-300 ${
+      shadow ? "shadow-xl" : ""
+    }`}>
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
-        <a href="#home">
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
-            <span className="text-blue-600 dark:text-blue-400">{"<"}</span>
-            Rachit
-            <span className="text-blue-600 dark:text-blue-400">{"/>"}</span>
+        {/* Logo - Keep your original logo code */}
+        <a href="#home" className="group">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200 flex items-center">
+            <span className="text-blue-600 dark:text-blue-400 inline-block origin-center animate-spin-slow">
+              {"<"}
+            </span>
+            <span className="mx-1">Rachit</span>
+            <span className="text-blue-600 dark:text-blue-400 inline-block origin-center animate-spin-slow-reverse">
+              {"/>"}
+            </span>
           </h1>
         </a>
 
@@ -46,6 +57,7 @@ export default function Navbar() {
               <li key={item.name}>
                 <a
                   href={item.href}
+                  onClick={item.onClick}
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium text-lg transition duration-300"
                 >
                   {item.name}
@@ -76,10 +88,7 @@ export default function Navbar() {
                 <span className="text-blue-600 dark:text-blue-400">{"/>"}</span>
               </h1>
               <div onClick={() => setNav(false)} className="cursor-pointer">
-                <FaTimes
-                  size={25}
-                  className="text-gray-700 dark:text-gray-300"
-                />
+                <FaTimes size={25} className="text-gray-700 dark:text-gray-300" />
               </div>
             </div>
 
@@ -88,7 +97,7 @@ export default function Navbar() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    onClick={() => setNav(false)}
+                    onClick={item.onClick}
                     className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-lg block"
                   >
                     {item.name}
