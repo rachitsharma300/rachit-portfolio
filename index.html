@@ -2,12 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/gif" href="/RLogo.svg" />
+    <link rel="icon" type="image/svg+xml" href="./RLogo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rachit Sharma</title>
+    <title>Rachit Sharma | Full Stack Developer</title>
+    
+    <!-- GitHub Pages Redirect Logic -->
+    <script>
+      if(window.location.pathname.includes('/rachit-portfolio')) {
+        sessionStorage.setItem('github-redirect', 'true');
+      }
+      if(!sessionStorage.getItem('github-redirect') && 
+         window.location.hostname === 'rachitsharma.github.io' &&
+         window.location.pathname !== '/rachit-portfolio/') {
+        window.location.href = '/rachit-portfolio/';
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="./src/main.jsx"></script>
+    
+    <!-- Fallback for non-JS users -->
+    <noscript>
+      <style>#root { display: none; }</style>
+      <div style="padding: 2rem; text-align: center;">
+        <h1>Rachit Sharma</h1>
+        <p>Please enable JavaScript to view this portfolio.</p>
+        <a href="/rachit-portfolio/">Go to homepage</a>
+      </div>
+    </noscript>
   </body>
 </html>
