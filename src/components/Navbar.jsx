@@ -22,23 +22,25 @@ export default function Navbar({ onContactClick }) {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { 
-      name: "Contact", 
+    {
+      name: "Contact",
       href: "#contact",
       onClick: (e) => {
         e.preventDefault();
         onContactClick();
         setNav(false);
-      }
-    }
+      },
+    },
   ];
 
   return (
-    <div className={`fixed w-full h-20 z-[100] bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm transition-colors duration-300 ${
-      shadow ? "shadow-xl" : ""
-    }`}>
+    <div
+      className={`fixed w-full h-20 z-[100] bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm transition-colors duration-300 ${
+        shadow ? "shadow-xl" : ""
+      }`}
+    >
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
-        {/* Logo - Keep your original logo code */}
+        {/* Logo Code */}
         <a href="#home" className="group">
           <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200 flex items-center">
             <span className="text-blue-600 dark:text-blue-400 inline-block origin-center animate-spin-slow">
@@ -88,7 +90,10 @@ export default function Navbar({ onContactClick }) {
                 <span className="text-blue-600 dark:text-blue-400">{"/>"}</span>
               </h1>
               <div onClick={() => setNav(false)} className="cursor-pointer">
-                <FaTimes size={25} className="text-gray-700 dark:text-gray-300" />
+                <FaTimes
+                  size={25}
+                  className="text-gray-700 dark:text-gray-300"
+                />
               </div>
             </div>
 
