@@ -8,19 +8,19 @@ const ProjectCard = ({
   tags = [],
   githubLink,
   liveLink,
-  videoUrl
+  videoUrl,
 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ 
+      whileHover={{
         scale: 1.05,
-        transition: { 
+        transition: {
           type: "spring",
           stiffness: 400,
-          damping: 10
-        }
+          damping: 10,
+        },
       }}
       viewport={{ once: true }}
       className="h-full bg-white dark:bg-dark-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-dark-700 cursor-pointer"
@@ -28,7 +28,7 @@ const ProjectCard = ({
       {/* Video or Image Placeholder */}
       <div className="h-48 bg-gray-100 dark:bg-dark-700 overflow-hidden">
         {videoUrl ? (
-          <iframe 
+          <iframe
             src={videoUrl}
             className="w-full h-full"
             frameBorder="0"
