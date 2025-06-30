@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaTimes } from 'react-icons/fa';
-
+import { motion } from "framer-motion";
+// eslint-disable-next-line no-unused-vars
+import { useState } from "react";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaTimes } from "react-icons/fa";
 
 const Contact = ({ isOpen, onToggle }) => {
   const handleSubmit = (e) => {
@@ -18,7 +18,7 @@ const Contact = ({ isOpen, onToggle }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={onToggle}
-          className="bg-blue-600 text-white p-4 rounded-full shadow-xl"
+          className="border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-dark-700 p-4 rounded-full shadow-xl"
           aria-label="Contact me"
         >
           <FaEnvelope className="text-xl" />
@@ -33,8 +33,10 @@ const Contact = ({ isOpen, onToggle }) => {
           className="bg-white dark:bg-dark-900 w-[90vw] max-w-md rounded-xl shadow-2xl overflow-hidden border border-gray-200 dark:border-dark-700"
         >
           <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-dark-700">
-            <h3 className="font-bold text-lg text-gray-800 dark:text-gray-200">Contact Me</h3>
-            <button 
+            <h3 className="font-bold text-lg text-gray-800 dark:text-gray-200">
+              Contact Me
+            </h3>
+            <button
               onClick={onToggle}
               className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
             >
@@ -81,15 +83,21 @@ const Contact = ({ isOpen, onToggle }) => {
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-3">
                 <FaMapMarkerAlt className="text-blue-600 dark:text-blue-400" />
-                <span className="text-gray-600 dark:text-gray-400">Gurugram, India</span>
+                <span className="text-gray-600 dark:text-gray-400">
+                  Gurugram, India
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <FaPhone className="text-blue-600 dark:text-blue-400" />
-                <span className="text-gray-600 dark:text-gray-400">+91 9871874041</span>
+                <span className="text-gray-600 dark:text-gray-400">
+                  +91 9871874041
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-600 dark:text-blue-400" />
-                <span className="text-gray-600 dark:text-gray-400">rachitsharma300@outlook.com</span>
+                <span className="text-gray-600 dark:text-gray-400">
+                  rachitsharma300@outlook.com
+                </span>
               </div>
             </div>
           </div>
