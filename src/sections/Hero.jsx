@@ -46,24 +46,30 @@ const Hero = () => {
                 options: {
                   char: {
                     value: [
+                      "Java",
+                      "JavaScript",
+                      "Python",
                       "HTML",
                       "CSS",
-                      "JS",
                       "React",
-                      "Node",
-                      "Python",
-                      "Java",
-                      "Git",
-                      "Docker",
-                      "AWS",
-                      "SQL",
+                      "TailwindCSS",
+                      "Thymeleaf",
+                      "Spring Boot",
+                      "Spring",
+                      "Database",
+                      "JWT",
+                      "WebFlux",
+                      "Batch Processing",
+                      "Node.js",
+                      "REST API",
+                      "MySQL",
+                      "JDBC",
                       "MongoDB",
-                      "PostgreSQL",
-                      "Tailwind",
-                      "Linux",
-                      "GitHub",
-                      "REST",
-                      "CI/CD",
+                      "AWS",
+                      "Postman",
+                      "IntelliJ",
+                      "Bootstrap",
+                      "System Design",
                     ],
                     font: "Verdana",
                     style: "",
@@ -73,19 +79,19 @@ const Hero = () => {
               },
               links: {
                 color: linkColor,
-                distance: 150, // Slightly increased distance for better readability
+                distance: 120, // Slightly increased distance for better readability
                 enable: true,
                 opacity: linkOpacity,
                 width: linkWidth,
               },
               move: {
                 enable: true,
-                speed: { min: 0.3, max: 1 }, // Slightly slower for text readability
+                speed: { min: 0.4, max: 1.5 }, // Slightly slower for text readability
                 outModes: { default: "bounce" },
               },
               opacity: particleOpacity,
               size: {
-                value: 6, // Fixed size for better text readability
+                value: 5.5, // Fixed size for better text readability
                 random: false,
               },
             },
@@ -129,9 +135,9 @@ const Hero = () => {
               options={{
                 strings: [
                   "Aspiring Full Stack Java Developer",
+                  "Building Full Stack Projects",
                   "Spring Boot Learner",
                   "React Enthusiast",
-                  "Building Full Stack Projects",
                   "Passionate Java Developer",
                 ],
                 autoStart: true,
