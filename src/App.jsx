@@ -1,4 +1,6 @@
 import { useState } from 'react'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -6,6 +8,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import Certifications from './sections/Certifications'
 import "./App.css";
 
 function App() {
@@ -23,6 +26,7 @@ function App() {
         isOpen={contactOpen} 
         onToggle={() => setContactOpen(!contactOpen)} 
       />
+           <Certifications /> 
       <Footer />
     </>
   );
