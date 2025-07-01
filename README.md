@@ -67,10 +67,6 @@ VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_USER_ID=your_user_id
 ```
-### Run locally:
-```bash
-npm run dev
-```
 ### Building for Production
 ```bash
 npm run build
