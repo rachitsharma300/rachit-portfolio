@@ -1,25 +1,21 @@
-# Rachit's Portfolio 
+# Rachit's Portfolio 🚀
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://rachitsharma300.github.io/rachit-portfolio)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/rachitsharma300/rachit-portfolio/blob/main/LICENSE)
 
 A modern, performant portfolio built with cutting-edge web technologies. Designed to showcase projects with smooth animations and responsive design.
 
-## Demo
-https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
+## 🎥 Demo
+![Portfolio Preview](https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80)
 
-🎥 Demo
-https://via.placeholder.com/800x400?text=Add+a+GIF+or+Screenshot+Here
-Live Demo: rachitsharma300.github.io/rachit-portfolio
-
-
+Live Demo: [https://rachitsharma300.github.io/rachit-portfolio](https://rachitsharma300.github.io/rachit-portfolio)
 
 ## ✨ Features
 
-- **2-Theme System (Light/Dark) 
-- **Animated UI with Framer Motion 
-- **Functional Contact Form (EmailJS) 
-- **Verified Certificates (GUVI integration) 
+- **2-Theme System** (Light/Dark)
+- **Animated UI** with Framer Motion
+- **Functional Contact Form** (EmailJS)
+- **Verified Certificates** (GUVI integration)
 - **Responsive Design** (Mobile-first approach)
 - **95+ Lighthouse Score** (Optimized performance)
 
@@ -29,8 +25,8 @@ Live Demo: rachitsharma300.github.io/rachit-portfolio
 | Category        | Technologies                                                                 |
 |-----------------|------------------------------------------------------------------------------|
 | Frontend        | ![React](https://img.shields.io/badge/React-20232A?logo=react) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?logo=framer) |
-| Backend         | ![EmailJS](https://img.shields.io/badge/EmailJS-red) (Contact form)         |
-| Deployment      | Github Pages) 
+| Backend         | ![EmailJS](https://img.shields.io/badge/EmailJS-DD0031?logo=mail.ru) (Contact form) |
+| Deployment      | ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?logo=github) |
 
 ### Key Dependencies
 ```json
