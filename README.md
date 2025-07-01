@@ -36,3 +36,14 @@ https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
   "emailjs-com": "^3.2.0",
   "tailwindcss": "^3.3.0"
 }
+```
+### Getting Started
+```
+Prerequisites
+Node.js ≥16.x
+
+npm/yarn
+
+Git
+```
+
