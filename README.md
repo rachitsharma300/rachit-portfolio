@@ -1,14 +1,12 @@
-# Rachit's Portfolio 🚀
+# Rachit's Portfolio 
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://rachitsharma300.github.io/rachit-portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/rachitsharma300/rachit-portfolio/blob/main/LICENSE)
 
 A modern, performant portfolio built with cutting-edge web technologies. Designed to showcase projects with smooth animations and responsive design.
 
-## 🎥 Demo
-![Portfolio Preview](https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80)
-
-Live Demo: [https://rachitsharma300.github.io/rachit-portfolio](https://rachitsharma300.github.io/rachit-portfolio)
+## Demo
+https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
 
 ## ✨ Features
 
@@ -62,23 +60,20 @@ npm install
 ```bash
 npm run dev
 ```
-### Set up environment variables:
+Set up environment variables (for local development):
+Create a .env file in root directory:
 ```env
 VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_USER_ID=your_user_id
 ```
-### Development
+### Run locally:
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 ### Building for Production
 ```bash
 npm run build
-# or
-yarn build
 ```
 ### Customization Guide
 1. Theme Colors
@@ -133,19 +128,21 @@ Framer Motion requires precise layout measurements
 
 
 ### Deployment
-Recommended Platforms:
-Vercel (Best for Next.js)
-
+Install gh-pages:
 ```bash
-vercel --prod
-Netlify (Simple static hosting)
+npm install gh-pages --save-dev
 ```
-```bash
-netlify deploy --prod
-GitHub Pages (Free option)
+### Add to package.json:
+```json
+"homepage": "https://rachitsharma300.github.io/rachit-portfolio",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
 ```
+### Deploy:
 ```bash
-npm run build && gh-pages -d dist
+npm run deploy
 ```
 ### License
 MIT © Rachit Sharma
