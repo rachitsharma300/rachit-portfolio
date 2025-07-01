@@ -1,6 +1,6 @@
 # Rachit's Portfolio 🚀
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://yourportfolio.com)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://rachitsharma300.github.io/rachit-portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 
