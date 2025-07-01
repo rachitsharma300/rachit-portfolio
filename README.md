@@ -46,4 +46,10 @@ npm/yarn
 
 Git
 ```
+### Installation
+Clone the repo:
 
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+```
