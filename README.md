@@ -1,20 +1,25 @@
-# Rachit's Portfolio 🚀
+# Rachit's Portfolio 
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://rachitsharma300.github.io/rachit-portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-
-
 A modern, performant portfolio built with cutting-edge web technologies. Designed to showcase projects with smooth animations and responsive design.
+
 ## Demo
 https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
 
+🎥 Demo
+https://via.placeholder.com/800x400?text=Add+a+GIF+or+Screenshot+Here
+Live Demo: rachitsharma300.github.io/rachit-portfolio
+
+
+
 ## ✨ Features
 
-- **3 Theme System** (Light/Dark)
-- **Animated UI Elements** (Framer Motion)
-- **Contact Form** with EmailJS integration
-- **Certificate Showcase** with GUVI verification
+- **2-Theme System (Light/Dark) 
+- **Animated UI with Framer Motion 
+- **Functional Contact Form (EmailJS) 
+- **Verified Certificates (GUVI integration) 
 - **Responsive Design** (Mobile-first approach)
 - **95+ Lighthouse Score** (Optimized performance)
 
@@ -25,7 +30,7 @@ https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
 |-----------------|------------------------------------------------------------------------------|
 | Frontend        | ![React](https://img.shields.io/badge/React-20232A?logo=react) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?logo=framer) |
 | Backend         | ![EmailJS](https://img.shields.io/badge/EmailJS-red) (Contact form)         |
-| Deployment      | ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel) ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify) |
+| Deployment      | Github Pages) 
 
 ### Key Dependencies
 ```json
@@ -38,12 +43,10 @@ https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
 }
 ```
 ### Getting Started
-```
 Prerequisites
+```
 Node.js ≥16.x
-
-npm/yarn
-
+npm
 Git
 ```
 ### Installation
@@ -58,12 +61,13 @@ cd portfolio
 
 ```bash
 npm install
-# or
-yarn install
 ```
-```Set up environment variables:
-
-env
+### Run locally:
+```bash
+npm run dev
+```
+### Set up environment variables:
+```env
 VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_USER_ID=your_user_id
