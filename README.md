@@ -53,3 +53,12 @@ Clone the repo:
 git clone https://github.com/yourusername/portfolio.git
 cd portfolio
 ```
+
+### Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
