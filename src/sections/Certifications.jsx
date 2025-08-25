@@ -21,20 +21,21 @@ const certifications = [
     skills: ["Problem Solving", "Logic"],
   },
   {
-    id: "Coming Soon",
+    id: "JY4W34O75461MdD01Z",
     title: "JAVASCRIPT",
     issuer: "GUVI",
     date: "2025",
-    link: "https://www.guvi.in",
+    link: "https://www.guvi.in/share-certificate/JY4W34O75461MdD01Z",
     skills: ["Scripting"],
   },
   {
-    id: "Coming Soon",
+    id: "Y48F1W850h7m515B8A",
     title: "AWS",
     issuer: "GUVI",
     date: "2025",
-    link: "https://www.guvi.in/",
-    skills: [""],
+    link: "https://www.guvi.in/share-certificate/Y48F1W850h7m515B8A",
+    skills: ["EC2", "Route 53", "AWS Amplify", "S3"],
+
   },
   {
     id: "Coming Soon",
