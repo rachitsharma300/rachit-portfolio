@@ -96,7 +96,10 @@ const Skills = () => {
         // Developer Tools
         { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
         { name: "IntelliJ", icon: <DiIntellij className="text-purple-600" /> },
-        { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500" />,},
+        {
+          name: "Bootstrap",
+          icon: <SiBootstrap className="text-purple-500" />,
+        },
         { name: "Git", icon: <SiGit className="text-orange-500" /> },
       ],
       color: "border-amber-200 dark:border-amber-900/50",
@@ -105,10 +108,10 @@ const Skills = () => {
 
   const proficiencyData = [
     { skill: "Java", level: 90, color: "bg-red-500" },
-    { skill: "Spring", level: 80, color: "bg-green-500" },
-    { skill: "JavaScript", level: 75, color: "bg-yellow-500" },
-    { skill: "SQL", level: 70, color: "bg-blue-600" },
-    { skill: "Node.Js", level: 65, color: "bg-purple-600" },
+    { skill: "Spring", level: 75, color: "bg-green-500" },
+    { skill: "JavaScript", level: 70, color: "bg-yellow-500" },
+    { skill: "SQL", level: 80, color: "bg-blue-600" },
+    { skill: "Node.Js", level: 70, color: "bg-purple-600" },
   ];
 
   const SkillBox = ({ category, index }) => {
@@ -134,20 +137,23 @@ const Skills = () => {
         const scrollSpeed = 40; // pixels per second
         let animationId;
 
+        // detect mobile
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
         const scrollContent = () => {
           scrollPosition += scrollSpeed / 60; // 60fps
 
           if (scrollPosition >= contentHeight - containerHeight) {
-            // Smoothly return to top
+            // Reset to top
             container.scrollTo({
               top: 0,
-              behavior: "smooth",
+              behavior: isMobile ? "auto" : "smooth", // mobile fix
             });
             scrollPosition = 0;
           } else {
             container.scrollTo({
               top: scrollPosition,
-              behavior: "smooth",
+              behavior: isMobile ? "auto" : "smooth", // mobile fix
             });
           }
 
