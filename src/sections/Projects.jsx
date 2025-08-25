@@ -3,10 +3,29 @@ import ProjectCard from "../components/ProjectCard";
 import { motion } from "framer-motion";
 
 const Projects = () => {
+  // Java (Spring Boot, Monolithic), React.js, JavaScript, MongoDB, AWS, Docker
   const projects = [
     {
+      title: "Patna Metro Route Finder Voice Assistant",
+      description:
+        "Developed a first-of-its-kind Patna Metro Route Finder web application, providing users with accurate live metro routes, fare calculation, and distance details. Integrated an intelligent chatbot assistant to offer seamless query support and enhance user experience",
+      tags: [
+        "Java",
+        "Spring Boot",
+        "Monolithic",
+        "React.js",
+        "MongoDB",
+        "Docker",
+        "AWS",
+      ],
+      githubLink: "https://github.com/rachitsharma300/Patna-Metro",
+      liveLink: "https://www.patnametromap.in/",
+      videoUrl:
+        "https://github.com/user-attachments/assets/a815c282-29fa-4318-af81-52f6d5ec7c73",
+    },
+    {
       title: "ByteBuzz Chat App",
-      description: "Real-time chat app with Spring Boot (WebSocket) & React.",
+      description: "Developed Bytebuzz, a real-time chat platform using Spring Boot (WebSocket) and React, enabling low-latency one-to-one and group messaging with a responsive UI and scalable backend.",
       tags: ["Java", "Spring Boot", "WebSocket", "React", "MongoDB", "Docker"],
       githubLink: "https://github.com/rachitsharma300/bytebuzz-chat-app",
       liveLink: "https://byte-buzz-chat-app.netlify.app/",
@@ -16,7 +35,7 @@ const Projects = () => {
     {
       title: "Weather Web App",
       description:
-        "Real-time weather forecasts using OpenWeather API with Java backend.",
+        "Built a real-time weather forecast application using Java (Servlets, JSP) and OpenWeather API, delivering accurate location-based weather updates through a dynamic web interface.",
       tags: [
         "Java",
         "Servlet",
@@ -31,16 +50,16 @@ const Projects = () => {
       videoUrl:
         "https://github.com/rachitsharma300/Weather-Web-App/assets/50745070/204eeaac-103e-44d1-9ab8-e01451e1e908",
     },
-    {
-      title: "Personal Portfolio",
-      description:
-        "Interactive developer portfolio with modern UI and project showcase.",
-      tags: ["React", "Tailwind CSS", "Framer Motion", "Responsive Design"],
-      githubLink: "https://github.com/rachitsharma300/rachit-portfolio",
-      liveLink: "",
-      videoUrl:
-        "https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80",
-    },
+    // {
+    //   title: "Personal Portfolio",
+    //   description:
+    //     "Interactive developer portfolio with modern UI and project showcase.",
+    //   tags: ["React", "Tailwind CSS", "Framer Motion", "Responsive Design"],
+    //   githubLink: "https://github.com/rachitsharma300/rachit-portfolio",
+    //   liveLink: "",
+    //   videoUrl:
+    //     "https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80",
+    // },
   ];
 
   return (
@@ -60,7 +79,8 @@ const Projects = () => {
             My Projects
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-           My technical solutions to real-world problems - demonstrated through these projects.
+            My technical solutions to real-world problems - demonstrated through
+            these projects.
           </p>
         </motion.div>
 
