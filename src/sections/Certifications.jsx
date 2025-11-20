@@ -13,11 +13,11 @@ const certifications = [
     skills: ["HTML5", "CSS3", "Responsive Design"],
   },
   {
-    id: "Coming soon",
+    id: "H57k6659AU51MnP998",
     title: "DSA with JAVA",
     issuer: "GUVI",
     date: "June 2025",
-    link: "https://www.guvi.in/",
+    link: "https://www.guvi.in/share-certificate/H57k6659AU51MnP998",
     skills: ["Problem Solving", "Logic"],
   },
   {
