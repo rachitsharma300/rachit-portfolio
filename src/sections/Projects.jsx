@@ -25,7 +25,8 @@ const Projects = () => {
     },
     {
       title: "ByteBuzz Chat App",
-      description: "Developed Bytebuzz, a real-time chat platform using Spring Boot (WebSocket) and React, enabling low-latency one-to-one and group messaging with a responsive UI and scalable backend.",
+      description:
+        "Developed Bytebuzz, a real-time chat platform using Spring Boot (WebSocket) and React, enabling low-latency one-to-one and group messaging with a responsive UI and scalable backend.",
       tags: ["Java", "Spring Boot", "WebSocket", "React", "MongoDB", "Docker"],
       githubLink: "https://github.com/rachitsharma300/bytebuzz-chat-app",
       liveLink: "https://byte-buzz-chat-app.netlify.app/",
@@ -50,16 +51,6 @@ const Projects = () => {
       videoUrl:
         "https://github.com/rachitsharma300/Weather-Web-App/assets/50745070/204eeaac-103e-44d1-9ab8-e01451e1e908",
     },
-    // {
-    //   title: "Personal Portfolio",
-    //   description:
-    //     "Interactive developer portfolio with modern UI and project showcase.",
-    //   tags: ["React", "Tailwind CSS", "Framer Motion", "Responsive Design"],
-    //   githubLink: "https://github.com/rachitsharma300/rachit-portfolio",
-    //   liveLink: "",
-    //   videoUrl:
-    //     "https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80",
-    // },
   ];
 
   return (
