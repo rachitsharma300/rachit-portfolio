@@ -22,6 +22,7 @@ export default function Navbar({ onContactClick }) {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Certifications", href: "#certifications" },
     {
       name: "Contact",
       href: "#contact",
@@ -35,9 +36,8 @@ export default function Navbar({ onContactClick }) {
 
   return (
     <div
-      className={`fixed w-full h-20 z-[100] bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm transition-colors duration-300 ${
-        shadow ? "shadow-xl" : ""
-      }`}
+      className={`fixed w-full h-20 z-[100] bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm transition-colors duration-300 ${shadow ? "shadow-xl" : ""
+        }`}
     >
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         {/* Logo Code */}
