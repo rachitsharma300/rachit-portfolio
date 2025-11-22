@@ -6,28 +6,28 @@ import profilePhoto2 from "../assets/Rachit1.jpeg";
 
 const About = () => {
   const controls = useAnimation();
-  
+
   useEffect(() => {
     const sequence = async () => {
       while (true) {
         // First flip (show backside)
-        await controls.start({ 
+        await controls.start({
           rotateY: 180,
-          transition: { duration: 1.5, ease: "easeInOut" } 
+          transition: { duration: 1.5, ease: "easeInOut" },
         });
         // Pause on backside
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 2000));
         // Second flip (show second photo)
-        await controls.start({ 
+        await controls.start({
           rotateY: 360,
-          transition: { duration: 1.5, ease: "easeInOut" } 
+          transition: { duration: 1.5, ease: "easeInOut" },
         });
         // Pause on second photo
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        await new Promise((resolve) => setTimeout(resolve, 3000));
         // Reset to first photo
-        await controls.start({ 
+        await controls.start({
           rotateY: 0,
-          transition: { duration: 0 } // Instant reset
+          transition: { duration: 0 }, // Instant reset
         });
       }
     };
@@ -121,7 +121,8 @@ const About = () => {
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Full Stack Java Developer passionate about building robust applications
+            Full Stack Java Developer passionate about building robust
+            applications
           </p>
         </motion.div>
 
@@ -142,9 +143,9 @@ const About = () => {
                 </div>
 
                 {/* Back Side - Developer Info */}
-                <div 
+                <div
                   className="absolute w-full h-full backface-hidden bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center p-6 text-white text-center"
-                  style={{ transform: 'rotateY(180deg)' }}
+                  style={{ transform: "rotateY(180deg)" }}
                 >
                   <div>
                     <h3 className="text-xl font-bold mb-2">Rachit Sharma</h3>
@@ -154,9 +155,9 @@ const About = () => {
                 </div>
 
                 {/* Second Photo (hidden until flipped) */}
-                <div 
+                <div
                   className="absolute w-full h-full backface-hidden"
-                  style={{ transform: 'rotateY(180deg)' }}
+                  style={{ transform: "rotateY(180deg)" }}
                 >
                   <img
                     src={profilePhoto2}
