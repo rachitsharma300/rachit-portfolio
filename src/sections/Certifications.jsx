@@ -35,7 +35,6 @@ const certifications = [
     date: "2025",
     link: "https://www.guvi.in/share-certificate/Y48F1W850h7m515B8A",
     skills: ["EC2", "Route 53", "AWS Amplify", "S3"],
-
   },
   {
     id: "Coming Soon",
@@ -72,7 +71,7 @@ export default function Certifications() {
       {!isExpanded && (
         <motion.a
           href="#" // Remove if using button
-          whileHover={{ scale: 1.05 }} 
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsExpanded(true)}
           className="flex items-center gap-2 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-dark-700 px-6 py-3 rounded-lg font-medium transition"
