@@ -31,7 +31,7 @@ const Hero = () => {
       className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-white dark:from-dark-800 dark:to-dark-900"
     >
       {/* Particle Background - Full Screen */}
-      <div className="absolute inset-0 z-0 h-full w-full">
+      <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
         <Particles
           id="tsparticles"
           init={particlesInit}
@@ -39,37 +39,14 @@ const Hero = () => {
             fullScreen: { enable: false },
             background: { color: "transparent" },
             particles: {
-              number: { value: darkMode ? 50 : 40 }, // Reduced number since text takes more space
+              number: { value: darkMode ? 30 : 25 }, // Optimized for performance
               color: { value: particleColor },
               shape: {
                 type: "char",
                 options: {
                   char: {
                     value: [
-                      "Java",
-                      "JavaScript",
-                      "Python",
-                      "HTML",
-                      "CSS",
-                      "React",
-                      "TailwindCSS",
-                      "Thymeleaf",
-                      "Spring Boot",
-                      "Spring",
-                      "Database",
-                      "JWT",
-                      "WebFlux",
-                      "Batch Processing",
-                      "Node.js",
-                      "REST API",
-                      "MySQL",
-                      "JDBC",
-                      "MongoDB",
-                      "AWS",
-                      "Postman",
-                      "IntelliJ",
-                      "Bootstrap",
-                      "System Design",
+                      "Java", "Spring", "React", "AWS", "Docker", "SQL", "NoSQL", "REST", "Microservices"
                     ],
                     font: "Verdana",
                     style: "",
@@ -79,19 +56,19 @@ const Hero = () => {
               },
               links: {
                 color: linkColor,
-                distance: 120, // Slightly increased distance for better readability
+                distance: 150,
                 enable: true,
                 opacity: linkOpacity,
                 width: linkWidth,
               },
               move: {
                 enable: true,
-                speed: { min: 0.4, max: 1.5 }, // Slightly slower for text readability
+                speed: { min: 0.2, max: 1 }, // Slower, smoother movement
                 outModes: { default: "bounce" },
               },
               opacity: particleOpacity,
               size: {
-                value: 5.5, // Fixed size for better text readability
+                value: 5,
                 random: false,
               },
             },
@@ -99,13 +76,15 @@ const Hero = () => {
               events: {
                 onHover: {
                   enable: true,
-                  mode: "repulse",
+                  mode: "grab", // Changed to grab for a more connected feel
                 },
               },
               modes: {
-                repulse: {
-                  distance: 100, // Increased repulse distance
-                  duration: 0.4,
+                grab: {
+                  distance: 140,
+                  links: {
+                    opacity: 0.5
+                  }
                 },
               },
             },
@@ -116,6 +95,8 @@ const Hero = () => {
             height: "100%",
           }}
         />
+        {/* Gradient Overlay for Depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white dark:via-dark-900/50 dark:to-dark-900 pointer-events-none" />
       </div>
       {/* Content */}
       <div className="container mx-auto px-4 text-center relative z-10">
