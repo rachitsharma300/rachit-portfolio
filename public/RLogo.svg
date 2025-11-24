@@ -1,4 +1,0 @@
-<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="48" stroke="#2563EB" stroke-width="4" fill="white"></circle>
-  <text x="50%" y="55%" text-anchor="middle" fill="#2563EB" font-size="48" font-family="Arial, Helvetica, sans-serif" dy=".3em">R</text>
-</svg>
