@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/rachit-portfolio/r_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rachit Sharma | Full Stack Developer</title>
+    
+    <!-- GitHub Pages Redirect Logic -->
+    <script>
+      if(window.location.pathname.includes('/rachit-portfolio')) {
+        sessionStorage.setItem('github-redirect', 'true');
+      }
+      if(!sessionStorage.getItem('github-redirect') && 
+         window.location.hostname === 'rachitsharma.github.io' &&
+         window.location.pathname !== '/rachit-portfolio/') {
+        window.location.href = '/rachit-portfolio/';
+      }
+    </script>
+    <script type="module" crossorigin src="/rachit-portfolio/assets/index-Cpleknkm.js"></script>
+    <link rel="stylesheet" crossorigin href="/rachit-portfolio/assets/index-wsn5kB8f.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Fallback for non-JS users -->
+    <noscript>
+      <style>#root { display: none; }</style>
+      <div style="padding: 2rem; text-align: center;">
+        <h1>Rachit Sharma</h1>
+        <p>Please enable JavaScript to view this portfolio.</p>
+        <a href="/rachit-portfolio/">Go to homepage</a>
+      </div>
+    </noscript>
+  </body>
+</html>
