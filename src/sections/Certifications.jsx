@@ -1,7 +1,40 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaAward, FaCheckCircle } from "react-icons/fa";
 
 const certifications = [
+  {
+    id: "H57k6659AU51MnP998",
+    title: "DSA with JAVA",
+    issuer: "GUVI",
+    date: "Oct 2025",
+    link: "https://www.guvi.in/share-certificate/H57k6659AU51MnP998",
+    skills: ["Problem Solving", "Logic", "Algorithms"],
+    gradient: "from-blue-500 to-cyan-500",
+  },
+  {
+    id: "Y71734xG6H3A7r36j4",
+    title: "System Design",
+    issuer: "GUVI",
+    date: "November 2025",
+    link: "https://www.guvi.in/share-certificate/Y71734xG6H3A7r36j4",
+    skills: [
+      "Scalability",
+      "Microservices",
+      "Architecture",
+      "Distributed Systems",
+    ],
+    gradient: "from-indigo-500 to-purple-600",
+  },
+    {
+    id: "16F37373865JS8t09T",
+    title: "Agile Fundamentals",
+    issuer: "GUVI",
+    date: "November 2025",
+    link: "https://www.guvi.in/share-certificate/16F37373865JS8t09T",
+    skills: ["Scrum", "Kanban", "Project Management"],
+    gradient: "from-indigo-400 to-purple-600",
+  },
   {
     id: "EnS6Qap2781571j740",
     title: "HTML & CSS",
@@ -11,51 +44,25 @@ const certifications = [
     skills: ["HTML5", "CSS3", "Responsive Design"],
     gradient: "from-orange-500 to-red-500",
   },
-  {
-    id: "H57k6659AU51MnP998",
-    title: "DSA with JAVA",
-    issuer: "GUVI",
-    date: "June 2025",
-    link: "https://www.guvi.in/share-certificate/H57k6659AU51MnP998",
-    skills: ["Problem Solving", "Logic", "Algorithms"],
-    gradient: "from-blue-500 to-cyan-500",
-  },
+
   {
     id: "JY4W34O75461MdD01Z",
     title: "JAVASCRIPT",
     issuer: "GUVI",
-    date: "2025",
+    date: "July 2025",
     link: "https://www.guvi.in/share-certificate/JY4W34O75461MdD01Z",
     skills: ["ES6+", "DOM Manipulation", "Async/Await"],
     gradient: "from-yellow-400 to-orange-500",
   },
+
   {
     id: "Y48F1W850h7m515B8A",
     title: "AWS Cloud Practitioner",
     issuer: "GUVI",
-    date: "2025",
+    date: "Aug 2025",
     link: "https://www.guvi.in/share-certificate/Y48F1W850h7m515B8A",
     skills: ["EC2", "S3", "Cloud Security", "Amplify"],
     gradient: "from-orange-400 to-amber-600",
-  },
-  {
-    id: "Y71734xG6H3A7r36j4",
-    title: "System Design",
-    issuer: "GUVI",
-    date: "November 2025",
-    link: "https://www.guvi.in/share-certificate/Y71734xG6H3A7r36j4",
-    skills: ["Scalability", "Microservices", "Architecture", "Distributed Systems"],
-    gradient: "from-indigo-500 to-purple-600",
-  },
-  {
-    id: "Coming Soon 2",
-    title: "Agile Fundamentals",
-    issuer: "GUVI",
-    date: "In Progress",
-    link: "https://www.guvi.in/",
-    skills: ["Scrum", "Kanban", "Project Management"],
-    gradient: "from-indigo-400 to-purple-600",
-    isPending: true,
   },
   {
     id: "0Kc2Ww1C6s412474u1",
@@ -65,7 +72,7 @@ const certifications = [
     link: "https://www.guvi.in/share-certificate/0Kc2Ww1C6s412474u1",
     skills: ["Prompt Engineering", "AI Integration"],
     gradient: "from-teal-400 to-emerald-600",
-  }
+  },
 ];
 
 const CertificateCard = ({ cert, index }) => {
@@ -93,11 +100,16 @@ const CertificateCard = ({ cert, index }) => {
                 Issued by {cert.issuer}
               </span>
               {!cert.isPending && (
-                <FaCheckCircle className="text-blue-500 text-xs" title="Verified" />
+                <FaCheckCircle
+                  className="text-blue-500 text-xs"
+                  title="Verified"
+                />
               )}
             </div>
           </div>
-          <div className={`p-3 rounded-xl bg-gradient-to-br ${cert.gradient} bg-opacity-10 text-white shadow-md`}>
+          <div
+            className={`p-3 rounded-xl bg-gradient-to-br ${cert.gradient} bg-opacity-10 text-white shadow-md`}
+          >
             <FaAward className="text-xl" />
           </div>
         </div>
@@ -142,7 +154,10 @@ const CertificateCard = ({ cert, index }) => {
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-20 bg-gray-50 dark:bg-dark-900 transition-colors duration-300">
+    <section
+      id="certifications"
+      className="py-20 bg-gray-50 dark:bg-dark-900 transition-colors duration-300"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -156,7 +171,8 @@ const Certifications = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Continuous learning and validation of my technical skills through industry-recognized certifications.
+            Continuous learning and validation of my technical skills through
+            industry-recognized certifications.
           </p>
         </motion.div>
 
