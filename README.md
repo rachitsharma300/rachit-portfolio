@@ -1,10 +1,10 @@
 # Rachit's Portfolio 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://rachitsharma300.github.io/rachit-portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/rachitsharma300/rachit-portfolio/blob/main/LICENSE)
+
 
 A modern, performant portfolio built with cutting-edge web technologies. Designed to showcase projects with smooth animations and responsive design.
 
-## Demo
-https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
 
 ## ✨ Features
 
@@ -143,5 +143,7 @@ MIT © Rachit Sharma
 
 
 <!--
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://rachitsharma300.github.io/rachit-portfolio)
+
+## Demo
+https://github.com/user-attachments/assets/6b598e91-071c-4ba2-8559-be130678cd80
 -->
