@@ -57,13 +57,6 @@ npm install
 ```bash
 npm run dev
 ```
-Set up environment variables (for local development):
-Create a .env file in root directory:
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_USER_ID=your_user_id
-```
 ### Building for Production
 ```bash
 npm run build
