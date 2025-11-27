@@ -21,7 +21,6 @@ A modern, performant portfolio built with cutting-edge web technologies. Designe
 | Category        | Technologies                                                                 |
 |-----------------|------------------------------------------------------------------------------|
 | Frontend        | ![React](https://img.shields.io/badge/React-20232A?logo=react) ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?logo=framer) |
-| Backend         | ![EmailJS](https://img.shields.io/badge/EmailJS-DD0031?logo=mail.ru) (Contact form) |
 | Deployment      | ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?logo=github) |
 
 ### Key Dependencies
